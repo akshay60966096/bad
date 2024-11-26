@@ -1,3 +1,5 @@
+1st 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +53,14 @@ Git push -u origin master
 2nd 
 
 git commands
+
+git pull //to fetch the files from remote to local
+git branch //shows all branches
+git checkout branchname //switch branches
+git branch -d 
+git log
+
+git merge feature
 
 3rd ..
 
@@ -246,3 +256,6 @@ const chrome = require('selenium-webdriver/chrome');
 
 run the index.js Program
 >node index.js
+
+
+foe the 9th que just type the functionname(); 
