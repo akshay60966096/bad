@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+</head>
+<body>
+<form id="registrationForm">
+    <label for="fullName">Full Name:</label><br>
+    <input type="text" id="fullName" name="fullName" required><br>
+   <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">password:</label><br>
+    <input type="password" id="password" name="password" required><br>
+     <br>
+    <input type="submit" value="Register">
+</form>
+<div id="successMessage" style="display: none;">
+    <p>Registration Successful!</p>
+</div>
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        document.getElementById("successMessage").style.display = "block";
+        document.getElementById("registrationForm").reset();
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+Git
+Git init
+Git add nithin.html
+Git status
+Go to git hub
+Create new repository
+Git config —global user.email “adnanshaik5057@gmail.com
+Git config —global user.name”Adnan9573”
+Git status
+Git commit -m “comiting”
+Git remote add origin “reponame”
+Git push -u origin master
+
+
+2nd 
+
+git commands
+
+3rd ..
+
+4th jenkins pass
+this pc > windows > program data > jenkins > jenkins > secrets
+
+5th 
+pipeline
+{
+    agent any
+    stages
+    {
+        stage("Hello"){
+            steps{
+                echo "Red Signal !"
+            }
+        }
+        stage("Bye"){
+            steps{
+                echo "Yellow Signal  !"
+            }
+        }
+        stage("Good Bye"){
+            steps{
+                echo "Green Signal"
+            }
+        }
+    }
+}
+
+
+7th docker 
+open vsc code create app.py ans Dockerfile 
+and paste
+
+FROM python 
+RUN pip install selenium // reomve this
+WORKDIR /app
+COPY . /app
+CMD ["python3","app.py"]
+
+turn on the docker engine
+user name : akshay6096 // akshay141k@gmail.com
+
+password : Karthik@18
+
+docker build -t name .
+docker run name
+
+6th 
+6. Explore Docker commands for content management.
+Docker is a powerful platform for developing, shipping, and running applications in containers. Content management within Docker involves managing images, containers, volumes, and networks. Here are some essential Docker commands for content management
+Docker Commands for Content Management
+1. Docker run
+•	Description: Runs a command in a new container. It’s one of the most used Docker commands because it creates and starts a new container.
+•	Syntax: docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+•	Example: $ docker run --name mycontainer -it ubuntu:16.04 /bin/bash
+o	Explanation:
+	--name mycontainer: Assigns the name "mycontainer" to the container.
+	-it: Combines -i (interactive) and -t (pseudo-TTY) options to keep the container running interactively.
+2. Docker start
+•	Description: Starts one or more stopped containers. It does not create a new container but starts an existing one.
+•	Syntax: docker start [OPTIONS] CONTAINER [CONTAINER...]
+•	Example: $ docker start mycontainer
+o	Explanation: Starts the container named "mycontainer".
+3. Docker stop
+•	Description: Stops one or more running containers. It sends a SIGTERM signal to the main process inside the container, allowing it to exit gracefully.
+•	Syntax: docker stop [OPTIONS] CONTAINER [CONTAINER...]
+•	Example: $ docker stop mycontainer
+o	Explanation: Stops the container named "mycontainer".
+4. Docker rm
+•	Description: Removes one or more containers. The container must be stopped before it can be removed.
+•	Syntax: docker rm [OPTIONS] CONTAINER [CONTAINER...]
+•	Example: $ docker rm mycontainer
+o	Explanation: Removes the container named "mycontainer".
+ 
+5. Docker ps
+•	Description: Lists containers. By default, it shows only running containers.
+•	Syntax: docker ps [OPTIONS]
+•	Example: $ docker ps
+o	Explanation: Lists all currently running containers. To list all containers, including stopped ones, use docker ps -a.
+6. Docker images
+•	Description: Lists images. It shows all the Docker images available on the local host.
+•	Syntax: docker images [OPTIONS] [REPOSITORY[:TAG]]
+•	Example: $ docker images
+o	Explanation: Lists all images stored locally on the host.
+ 
+7. Docker pull
+•	Description: Pulls an image or a repository from a registry. It downloads the image from a Docker registry like Docker Hub.
+•	Syntax: docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+•	Example: $ docker pull ubuntu:16.04
+o	Explanation: Pulls the Ubuntu 16.04 image from the Docker Hub registry.
+8. Docker push
+•	Description: Pushes an image or a repository to a registry. It uploads the image to a Docker registry.
+•	Syntax: docker push [OPTIONS] NAME[:TAG]
+•	Example: $ docker push myimage
+o	Explanation: Pushes the image named "myimage" to the Docker Hub registry.
+
+8th selenium
+const {By,Key,Builder} = require("selenium-webdriver");
+require("chromedriver");
+ 
+async function example()
+{
+ 
+       var searchString = "Automation testing with Selenium";
+       
+ 
+      
+       let driver = await new Builder().forBrowser("chrome").build();
+ 
+       
+        await driver.get("http://google.com");
+            
+        
+        await driver.findElement(By.name("q")).sendKeys(searchString,Key.RETURN);
+        
+
+ 
+        //Verify the page title and print it
+        var title = await driver.getTitle();
+        console.log('Title is:',title);
+        console.log("Test case 1 Passed");
+        
+        
+        await driver.quit();
+ 
+}
+
+example();
+
+paste this code in notepad ans save as filename.js
+then cmd 
+filename.js
+npm install selenium
+npm install webdriver -manager
+Scam the code and paste it in the notepad and save it 
+Go to cmd 
+Node filename.js
+
+9th test cases
+
+open cmd
+run the following to create a folder
+>mkdir hello-selenium
+>cd hello-selenium
+
+initialize node project
+>npm init -y
+
+install selenium-webdriver package
+>npm install selenium-webdriver
+
+create index.js file
+add the following code in index.js
+
+const { Builder, By, Key, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
+
+(async () => {
+    const driver = await new Builder()
+        .forBrowser('chrome')
+        .setChromeOptions(new chrome.Options())
+        .build();
+
+    try {
+        // Test Case 1: Navigate to Google and verify title
+        await driver.get('https://www.google.com');
+        await driver.wait(until.titleContains('Google'), 10000);
+        console.log('Test Case 1 Passed: Title contains "Google"');
+
+        // Test Case 2: Search for "Selenium" on Google
+        await driver.findElement(By.name('q')).sendKeys('Selenium', Key.RETURN);
+        await driver.wait(until.titleContains('Selenium'), 10000);
+        console.log('Test Case 2 Passed: Title contains "Selenium"');
+
+        // Test Case 3: Verify search results
+        const searchResults = await driver.findElements(By.css('div.g'));
+        console.log(Test Case 3 Passed: Found ${searchResults.length} search results);
+
+        // Test Case 4: Verify the presence of the search input box
+        const searchInput = await driver.findElement(By.name('q'));
+        const isSearchInputDisplayed = await searchInput.isDisplayed();
+        console.log(Test Case 4 Passed: Search input box is displayed: ${isSearchInputDisplayed});
+
+    } catch (error) {
+        console.error('One or more test cases failed:', error);
+    } finally {
+        await driver.quit();
+    }
+})();
+
+
+run the index.js Program
+>node index.js
