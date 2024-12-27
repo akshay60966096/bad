@@ -67,29 +67,7 @@ git merge feature
 4th jenkins pass
 this pc > windows > program data > jenkins > jenkins > secrets
 
-5th 
-pipeline
-{
-    agent any
-    stages
-    {
-        stage("Hello"){
-            steps{
-                echo "Red Signal !"
-            }
-        }
-        stage("Bye"){
-            steps{
-                echo "Yellow Signal  !"
-            }
-        }
-        stage("Good Bye"){
-            steps{
-                echo "Green Signal"
-            }
-        }
-    }
-}
+
 
 
 7th docker 
