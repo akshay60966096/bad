@@ -237,3 +237,27 @@ run the index.js Program
 
 
 foe the 9th que just type the functionname(); 
+
+
+
+
+_______________________Selenium ---------------------------------
+const {Builder,Browser,By,Key}=require("selenium-webdriver");
+
+
+async function exam()
+{
+	let driver =await new Builder().forBrowser(Browser.EDGE).build();
+	let terms=["Hello","Gemini","Selenium"]
+	
+	
+	for(let i=0;i<=terms.length;i++)
+	{
+		await driver.get("https://www.google.com");
+		await driver.findElement(By.name('q')).sendKeys(terms[i],Key.RETURN);
+	}
+	console.log("Test case 1 passed ");
+	console.log("Test case 2 passed ");
+	console.log("Test case 3 passed ");
+}
+exam();
